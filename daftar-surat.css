@@ -1,10 +1,11 @@
 :root {
   --nav: #1b6fa0;
   --table: rgba(0, 0, 0, 0.2);
-  --icons: #fff;
+  --secundary: #fff;
   --border: #464d63;
   --cancel: #c51e1e;
   --submit: #32c532;
+  --delete: #242121;
 }
 
 * {
@@ -25,7 +26,7 @@
 /* navbar section */
 .navbar {
   background-color: var(--nav);
-  color: #fff;
+  color: var(--secundary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +37,7 @@
   .logo {
     font-size: 2.2rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--secundary);
     font-style: italic;
   }
 
@@ -46,7 +47,7 @@
 
   .search-form {
     position: relative;
-    background-color: #fff;
+    background-color: var(--secundary);
     width: 60%;
     height: 2.5rem;
     display: flex;
@@ -80,7 +81,7 @@
 
   /* kolom tabel */
   .table-header {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     box-sizing: border-box;
     width: 100%;
@@ -119,13 +120,16 @@
     padding: 0 8px;
   }
   &.keterangan {
-    width: 7%;
+    width: \%;
   }
   &.instansi {
     width: 7%;
   }
   &.disposisi {
     width: 7%;
+  }
+  &.no-surat {
+    width: 11%;
   }
   .table-result {
     display: table-cell;
@@ -151,41 +155,63 @@
 }
 
 /* side-bar */
-.side-bar{
+.side-bar {
   /* add */
-  .add-btn{
-  width: 15%;
-  height: 50px;
-  background-color: var(--submit);
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  color:#fff;
-  font-weight: 700;
-  transition: 0.5s;
-  margin-left: 70rem;
-    .add-icon{
-      margin-left: -4rem;
+  .add-btn {
+    width: 13%;
+    height: 45px;
+    background-color: var(--submit);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--secundary);
+    font-weight: 600;
+    transition: 0.5s;
+    margin-left: 71rem;
+    .add-icon {
+      margin-left: -2rem;
       vertical-align: middle;
       width: 40%;
     }
-    &:hover{
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .del-btn {
+    width: 13%;
+    height: 45px;
+    background-color: var(--cancel);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--secundary);
+    font-weight: 600;
+    transition: 0.5s;
+    margin-left: 71rem;
+    margin-top: 1.5rem;
+    .del-icon {
+      margin-left: -1.2rem;
+      vertical-align: middle;
+      width: 40%;
+    }
+    &:hover {
       transform: scale(1.1);
     }
   }
 }
 
 /* form-box */
-.form-box {
+.form-box .form-add {
   display: none;
   position: absolute;
   left: 28%;
   width: 600px;
   height: 500px;
-  transform: translateY(-20%);
+  transform: translateY(-35%);
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--secundary);
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0.5);
   user-select: none;
@@ -193,7 +219,7 @@
   overflow: hidden;
   transition: transform 0.5s ease, height 0.2s ease;
 
-  .add-arsip {
+  .header-form {
     display: flex;
     height: auto;
     font-size: 30px;
@@ -223,7 +249,7 @@
         outline: none;
         transition: box-shadow 0.2s ease;
 
-        &:focus{
+        &:focus {
           border: 2px solid var(--border);
         }
       }
@@ -243,19 +269,19 @@
       #cancel {
         outline: none;
         background-color: var(--cancel);
-        color: #fff;
+        color: var(--secundary);
         &:hover {
-          background-color: #fff;
+          background-color: var(--secundary);
           color: var(--cancel);
-          border: 2px solid var(--cancel) ;
+          border: 2px solid var(--cancel);
         }
       }
       #submit {
         background-color: var(--submit);
-        color: #fff;
+        color: var(--secundary);
         margin-left: 10px;
-        &:hover{
-          background-color: #fff;
+        &:hover {
+          background-color: var(--secundary);
           color: var(--submit);
           border: 2px solid var(--submit);
         }
@@ -263,9 +289,96 @@
     }
   }
 }
+.form-del {
+  display: none;
+  position: absolute;
+  left: 28%;
+  width: 600px;
+  height: 450px;
+  transform: translateY(-35%);
+  padding: 20px;
+  background-color: var(--secundary);
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0.5);
+  user-select: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.5s ease, height 0.2s ease;
 
-.active{
+  .header-form {
+    display: flex;
+    height: auto;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form-mails {
+    display: block;
+    position: relative;
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+
+      .label {
+        margin-bottom: 5px;
+        pointer-events: none;
+        font-weight: 700;
+      }
+      .input {
+        padding: 7px 10px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        outline: none;
+        transition: box-shadow 0.2s ease;
+
+        &:focus {
+          border: 2px solid var(--border);
+        }
+      }
+    }
+
+    .form-btn {
+      display: flex;
+      margin-top: 18px;
+      justify-content: center;
+
+      .input {
+        width: 70px;
+        height: 30px;
+        font-size: 14px;
+        border-radius: 5px;
+      }
+      #cancel {
+        outline: none;
+        background-color: var(--cancel);
+        color: var(--secundary);
+        &:hover {
+          background-color: var(--secundary);
+          color: var(--cancel);
+          border: 2px solid var(--cancel);
+        }
+      }
+      #delete {
+        background-color: var(--delete);
+        color: var(--secundary);
+        margin-left: 10px;
+      }
+      &:hover {
+        background-color: var(--secundary);
+        color: var(--delete);
+        border: 2px solidi var(--delete);
+      }
+    }
+  }
+}
+
+.active {
   display: block;
+  /* kurang tambahin transisi */
 }
 
 /* footer */
