@@ -40,7 +40,7 @@
           Nomor Surat
         </div>
         <div class="tanggal-surat table-cell">
-          Tanggal Surat
+          Tgl Surat
         </div>
         <div class="instansi table-cell">
           Instansi
@@ -61,40 +61,72 @@
 
     <!-- side-bar start -->
     <div class="side-bar">
-      <button class="add-btn"><i data-feather="file-plus" class="add-icon"></i>Buat Arsip</button>
+      <button class="add-btn"><i data-feather="upload" class="add-icon"></i>Buat Arsip</button>
+      <button class="del-btn"><i data-feather="trash" class="del-icon"></i>Hapus Arsip</button>
     </div>
     <!-- side-bar end -->
 
     <!-- form start -->
     <div class="form-box">
-      <div class="add-arsip">Buat Arsip</div>
-      <form id="form-mails" action="#'">
-        <div class="input-group">
-          <label for="no-surat" class="label">No Surat</label>
-          <input type="text" id="no-surat" name="no-surat" class="input" required>
-        </div>
-        <div class="input-group">
-          <label for="tgl-surat" class="label">Tanggal Surat</label>
-          <input type="date" id="tgl-surat" name="tgl-surat" class="input" required>
-        </div>
-        <div class="input-group">
-          <label for="instansi" class="label">Instansi</label>
-          <input type="text" id="instansi" name="instansi" class="input" required>
-        </div>
-        <div class="input-group">
-          <label for="disposisi" class="label">Disposisi</label>
-          <input type="text" id="disposisi" name="disposisi" class="input" required>
-        </div>
-        <div class="input-group">
-          <label for="keterangan" class="label">Keterangan</label>
-          <input type="text" id="keterangan" name="keterangan" class="input" required>
-        </div>
+      <!-- form add -->
+      <div class="form-add">
+        <div class="header-form">Buat Arsip</div>
+        <form id="form-mails" action="#'">
+          <div class="input-group">
+            <label for="no-surat" class="label">No Surat</label>
+            <input type="text" id="no-surat" name="no-surat" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="tgl-surat" class="label">Tanggal Surat</label>
+            <input type="date" id="tgl-surat" name="tgl-surat" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="instansi" class="label">Instansi</label>
+            <input type="text" id="instansi" name="instansi" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="disposisi" class="label">Disposisi</label>
+            <input type="text" id="disposisi" name="disposisi" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="keterangan" class="label">Keterangan</label>
+            <input type="text" id="keterangan" name="keterangan" class="input" required>
+          </div>
 
-        <div class="form-btn">
-          <button type="reset" class="input" id="cancel">Batal</button>
-          <button type="submit" class="input" id="submit">Kirim</button>
-        </div>
-      </form>
+          <div class="form-btn">
+            <button type="reset" class="input" id="cancel">Batal</button>
+            <button type="submit" class="input" id="submit">Kirim</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- form del -->
+      <div class="form-del">
+        <div class="header-form">Hapus Arsip</div>
+        <form id="form-mails" action="#'">
+          <div class="input-group">
+            <label for="no-surat" class="label">No Surat</label>
+            <input type="text" id="no-surat" name="no-surat" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="tgl-surat" class="label">Tanggal Surat</label>
+            <input type="date" id="tgl-surat" name="tgl-surat" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="instansi" class="label">Instansi</label>
+            <input type="text" id="instansi" name="instansi" class="input" required>
+          </div>
+          <div class="input-group">
+            <label for="disposisi" class="label">Disposisi</label>
+            <input type="text" id="disposisi" name="disposisi" class="input" required>
+          </div>
+
+          <div class="form-btn">
+            <button type="reset" class="input" id="cancel">Batal</button>
+            <button type="submit" class="input" id="delete">Hapus</button>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- form end -->
 
@@ -112,5 +144,6 @@
   </script>
 
   <!-- javasript -->
-  <script href="daftar-surat.js"></script>
+  <script src="daftar-surat.js"></script>
   </body>
+</html>
