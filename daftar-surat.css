@@ -203,183 +203,187 @@
 }
 
 /* form-box */
-.form-box .form-add {
-  display: none;
-  position: absolute;
-  left: 28%;
-  width: 600px;
-  height: 500px;
-  transform: translateY(-35%);
-  padding: 20px;
-  background-color: var(--secundary);
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 0, 0.5);
-  user-select: none;
-  z-index: 1;
-  overflow: hidden;
-  transition: transform 0.5s ease, height 0.2s ease;
+.form-box
+  .form-add {
+    display: none;
+    position: absolute;
+    left: 28%;
+    width: 600px;
+    height: 500px;
+    transform: translateY(-35%);
+    padding: 20px;
+    background-color: var(--secundary);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0.5);
+    user-select: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.5s ease, height 0.2s ease;
 
-  .header-form {
-    display: flex;
-    height: auto;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    justify-content: center;
-    align-items: center;
+    .header-form {
+      display: flex;
+      height: auto;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 25px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #form-mails {
+      display: block;
+      position: relative;
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+
+        .label {
+          margin-bottom: 5px;
+          pointer-events: none;
+          font-weight: 700;
+        }
+        .input {
+          padding: 7px 10px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          outline: none;
+          transition: box-shadow 0.2s ease;
+
+          &:focus {
+            border: 2px solid var(--border);
+          }
+        }
+      }
+
+      .form-btn {
+        display: flex;
+        margin-top: 18px;
+        justify-content: center;
+
+        .input {
+          width: 70px;
+          height: 30px;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+        #cancel {
+          outline: none;
+          background-color: var(--cancel);
+          color: var(--secundary);
+          &:hover {
+            background-color: var(--secundary);
+            color: var(--cancel);
+            border: 2px solid var(--cancel);
+          }
+        }
+        #submit {
+          background-color: var(--submit);
+          color: var(--secundary);
+          margin-left: 10px;
+          &:hover {
+            background-color: var(--secundary);
+            color: var(--submit);
+            border: 2px solid var(--submit);
+          }
+        }
+      }
+    }
   }
 
-  #form-mails {
-    display: block;
-    position: relative;
-    .input-group {
+  .form-del {
+    display: none;
+    position: absolute;
+    left: 28%;
+    width: 600px;
+    height: 450px;
+    transform: translateY(-35%);
+    padding: 20px;
+    background-color: var(--secundary);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0.5);
+    user-select: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.5s ease, height 0.2s ease;
+  
+    .header-form {
       display: flex;
-      flex-direction: column;
-      margin-bottom: 12px;
-
-      .label {
-        margin-bottom: 5px;
-        pointer-events: none;
-        font-weight: 700;
-      }
-      .input {
-        padding: 7px 10px;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        outline: none;
-        transition: box-shadow 0.2s ease;
-
-        &:focus {
-          border: 2px solid var(--border);
-        }
-      }
-    }
-
-    .form-btn {
-      display: flex;
-      margin-top: 18px;
+      height: auto;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 25px;
       justify-content: center;
-
-      .input {
-        width: 70px;
-        height: 30px;
-        font-size: 14px;
-        border-radius: 5px;
-      }
-      #cancel {
-        outline: none;
-        background-color: var(--cancel);
-        color: var(--secundary);
-        &:hover {
-          background-color: var(--secundary);
-          color: var(--cancel);
-          border: 2px solid var(--cancel);
-        }
-      }
-      #submit {
-        background-color: var(--submit);
-        color: var(--secundary);
-        margin-left: 10px;
-        &:hover {
-          background-color: var(--secundary);
-          color: var(--submit);
-          border: 2px solid var(--submit);
-        }
-      }
+      align-items: center;
     }
+  
+    #form-mails {
+      display: block;
+      position: relative;
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+  
+        .label {
+          margin-bottom: 5px;
+          pointer-events: none;
+          font-weight: 700;
+        }
+        .input {
+          padding: 7px 10px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          outline: none;
+          transition: box-shadow 0.2s ease;
+  
+          &:focus {
+            border: 2px solid var(--border);
+          }
+        }
+      }
+  
+      .form-btn {
+        display: flex;
+        margin-top: 18px;
+        justify-content: center;
+  
+        .input {
+          width: 70px;
+          height: 30px;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+        #cancel1 {
+          outline: none;
+          background-color: var(--cancel);
+          color: var(--secundary);
+          &:hover {
+            background-color: var(--secundary);
+            color: var(--cancel);
+            border: 2px solid var(--cancel);
+          }
+        }
+        #delete {
+          background-color: var(--delete);
+          color: var(--secundary);
+          margin-left: 10px;
+        }
+        &:hover {
+          background-color: var(--secundary);
+          color: var(--delete);
+          border: 2px solidi var(--delete);
+        }
+      }
+    
   }
 }
-.form-del {
-  display: none;
-  position: absolute;
-  left: 28%;
-  width: 600px;
-  height: 450px;
-  transform: translateY(-35%);
-  padding: 20px;
-  background-color: var(--secundary);
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0, 0, 0.5);
-  user-select: none;
-  z-index: 1;
-  overflow: hidden;
-  transition: transform 0.5s ease, height 0.2s ease;
-
-  .header-form {
-    display: flex;
-    height: auto;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #form-mails {
-    display: block;
-    position: relative;
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 12px;
-
-      .label {
-        margin-bottom: 5px;
-        pointer-events: none;
-        font-weight: 700;
-      }
-      .input {
-        padding: 7px 10px;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        outline: none;
-        transition: box-shadow 0.2s ease;
-
-        &:focus {
-          border: 2px solid var(--border);
-        }
-      }
-    }
-
-    .form-btn {
-      display: flex;
-      margin-top: 18px;
-      justify-content: center;
-
-      .input {
-        width: 70px;
-        height: 30px;
-        font-size: 14px;
-        border-radius: 5px;
-      }
-      #cancel {
-        outline: none;
-        background-color: var(--cancel);
-        color: var(--secundary);
-        &:hover {
-          background-color: var(--secundary);
-          color: var(--cancel);
-          border: 2px solid var(--cancel);
-        }
-      }
-      #delete {
-        background-color: var(--delete);
-        color: var(--secundary);
-        margin-left: 10px;
-      }
-      &:hover {
-        background-color: var(--secundary);
-        color: var(--delete);
-        border: 2px solidi var(--delete);
-      }
-    }
-  }
-}
-
 .active {
   display: block;
   /* kurang tambahin transisi */
 }
+
+
 
 /* footer */
 footer {
