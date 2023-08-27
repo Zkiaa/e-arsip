@@ -191,11 +191,6 @@
 
 /* form-box */
 .form-box{
-  .active {
-    display: block;
-    /* kurang tambahin transisi */
-  }
-  
   .form-add {
     display: none;
     position: absolute;
@@ -368,6 +363,10 @@
         }
       }
     }
+  }
+  .active {
+    display: block;
+    /* kurang tambahin transisi */
   }
 }
 
