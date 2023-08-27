@@ -1,11 +1,11 @@
 // add-btn
-const addBtn = document.querySelector(".add-btn");
-const formBox = document.querySelector(".form-box");
-const cancel = document.querySelector("#cancel");
+const addBtn = document.getElementsByClassName(".add-btn");
+const formBox = document.getElementsByClassName(".form-box");
+const cancelBtn = document.getElementById("#cancel");
 
 addBtn.addEventListener("click", () => {
   formBox.classList.add("active");
 });
-cancel.addEventListener("click", () => {
+cancelBtn.addEventListener("click", () => {
   formBox.classList.remove("active");
 });
