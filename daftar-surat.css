@@ -139,19 +139,6 @@
     vertical-align: middle;
     padding: 0 12px;
   }
-  .border {
-    width: 100%;
-    height: 1px;
-    position: relative;
-    color: black;
-    opacity: 1;
-  }
-  .separator {
-    width: 100%;
-    height: 1px;
-    position: relative;
-    opacity: 0;
-  }
 }
 
 /* side-bar */
@@ -159,12 +146,12 @@
   /* add */
   .add-btn {
     width: 13%;
-    height: 45px;
+    height: 43px;
     background-color: var(--submit);
     outline: none;
-    border-radius: 6px;
+    border-radius: 7px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1em;
     color: var(--secundary);
     font-weight: 600;
     transition: 0.5s;
@@ -185,7 +172,7 @@
     outline: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1em;
     color: var(--secundary);
     font-weight: 600;
     transition: 0.5s;
@@ -203,7 +190,13 @@
 }
 
 /* form-box */
+
 .form-box{
+  .active {
+    display: block;
+    /* kurang tambahin transisi */
+  }
+  
   .form-add {
     display: none;
     position: absolute;
@@ -378,12 +371,6 @@
     }
   }
 }
-.active {
-  display: block;
-  /* kurang tambahin transisi */
-}
-
-
 
 /* footer */
 footer {
@@ -401,11 +388,11 @@ footer {
   }
 
   .credit p {
-    color: var(--icons);
+    color: var(--secundary);
     vertical-align: middle;
   }
   .credit a {
-    color: var(--icons);
+    color: var(--secundary);
     font-weight: 700;
   }
 }
