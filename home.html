@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="color:white; background-color: #1d2630;">
+     
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-5 mb-5"><strong>Website Surat Masuk</strong></h1>
+        </div>
+        <div class="main row justify-content-center">
+            <form action="" id="student-form" class="row justify-content-center mb-4" autocomplete="off"></form>
+            <div class="col-10 mb-3">
+                <label for="nomor surat">Nomor Surat</label>
+                <input class="form-control" id="nomor surat" type="text" placeholder="Masukan nomor">
+            </div>   
+            <div class="col-10 mb-3">
+            <label for="tanggal surat">Tanggal Surat</label>
+            <input class="form-control" id="tanggal surat" type="date" placeholder="Masukan tanggal">
+            </div>   
+            <div class="col-10 mb-3">
+            <label for="perihal surat">Perihal Surat</label>
+            <input class="form-control" id="perihal surat" type="text" placeholder="Masukan perihal">
+            </div> 
+            <div class="col-10 mb-3">
+            <label for="keterangan surat">Keterangan Surat</label>
+            <input class="form-control" id="keterangan surat" type="text" placeholder="Masukan keterangan">
+        </div>
+        <div class="col-10">
+        <input class="btn btn-success add-btn" type="submit" value="Kirim">
+        </div> 
+        <div class="col-12 col-md-10 mt-5">
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>Nomor Surat</th>
+                    <th>Tanggal Surat</th>
+                    <th>Perihal Surat</th>
+                    <th>Keterangan Surat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="student-list">
+                <tr>
+                    <td>657890</td>
+                    <td>2023-08-22</td>
+                    <td>Bertemu kepala sekolah</td>
+                    <td>Beasiswa tangguh</td>
+                    <td>
+                    <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm delete">Hapus</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+</body>
